@@ -1,6 +1,4 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(200).json({ status: 'Invoice endpoint active' });
   }
@@ -31,4 +29,4 @@ export default async function handler(req, res) {
     console.error('Invoice error:', err);
     res.status(500).json({ error: 'Failed to create invoice' });
   }
-}
+};
