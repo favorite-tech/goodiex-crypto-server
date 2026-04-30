@@ -1,11 +1,10 @@
 {
   "name": "goodiex-crypto-server",
   "version": "1.0.0",
-  "dependencies": {
-    "node-fetch": "2.6.9"
-  },
+  "type": "module",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   }
 }
+
 
