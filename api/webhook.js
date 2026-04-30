@@ -1,6 +1,4 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(200).json({ status: 'Webhook endpoint active' });
   }
@@ -26,4 +24,4 @@ export default async function handler(req, res) {
     console.error('Webhook error:', err);
     res.status(200).send('OK');
   }
-}
+};
