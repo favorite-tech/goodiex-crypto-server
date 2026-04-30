@@ -1,3 +1,5 @@
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 module.exports = async (req, res) => {
   const { order_id, payment_status } = req.body;
 
